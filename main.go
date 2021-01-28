@@ -26,52 +26,52 @@ func main() {
 			continue
 		}
 
-		switch input {
-		case "+", "a", "add":
-			stack = add(stack)
-		case "-", "s", "sub":
-			stack = sub(stack)
-		case "*", "m", "mul":
-			stack = mul(stack)
-		case "/":
-			stack = div(stack)
-		case "sw", "swap":
-			stack = swap(stack)
-		case "p", "pop":
-			stack = pop(stack)
-		case "q", "quit":
-			os.Exit(0)
-		case "c", "clear":
-			stack = []float64{}
-		default:
-			n, err := strconv.ParseFloat(input, 64)
-			if err != nil {
-				logrus.Errorf("error casting input to float: %s", err)
-				continue
-			}
+		for _, in := range input {
+			switch in {
+			case "+", "a", "add":
+				stack = add(stack)
+			case "-", "s", "sub":
+				stack = sub(stack)
+			case "*", "m", "mul":
+				stack = mul(stack)
+			case "/":
+				stack = div(stack)
+			case "sw", "swap":
+				stack = swap(stack)
+			case "p", "pop":
+				stack = pop(stack)
+			case "q", "quit":
+				os.Exit(0)
+			case "c", "clear":
+				stack = []float64{}
+			case "^", "pow":
+				stack = pow(stack)
+			default:
+				n, err := strconv.ParseFloat(in, 64)
+				if err != nil {
+					logrus.Errorf("error casting input to float: %s", err)
+					continue
+				}
 
-			stack = append(stack, n)
+				stack = append(stack, n)
+			}
 		}
 	}
 }
 
-func getInput(r *bufio.Reader) (string, error) {
+func getInput(r *bufio.Reader) ([]string, error) {
 	rawInput, err := r.ReadString('\n')
 	if err != nil {
-		return "", err
+		return []string{}, err
 	}
 
-	return strings.Trim(rawInput, "\n"), nil
+	rawInput = strings.Trim(rawInput, "\n")
+	return strings.Split(rawInput, " "), nil
 }
 
 func showStack(s []float64) {
-	fmt.Println("\n-- stack")
-	if len(s) == 0 {
-		fmt.Println("   empty")
-	} else {
-		for idx, val := range s {
-			fmt.Printf("%d:\t%f\n", idx, val)
-		}
+	for idx, val := range s {
+		fmt.Printf("%d:\t%f\n", idx, val)
 	}
-	fmt.Printf("-- end\n\n")
+	fmt.Println()
 }

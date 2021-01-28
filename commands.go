@@ -1,7 +1,5 @@
 package main
 
-import "os"
-
 func add(s []float64) []float64 {
 	if len(s) > 1 {
 		x, y := s[len(s)-1], s[len(s)-2]
@@ -51,8 +49,4 @@ func pop(s []float64) []float64 {
 		s = s[:len(s)-1]
 	}
 	return s
-}
-
-func quit() {
-	os.Exit(0)
 }

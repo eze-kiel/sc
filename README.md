@@ -58,6 +58,7 @@ Supported commands are the following:
 * `c`, `clear`: Clear the stack
 * `^`, `pow`: Do a power of the last two elements of the stack
 * `sum`: Sum all the stack
+* `sqrt`: Get the square root of the last element of the stack
   
 ## License
 

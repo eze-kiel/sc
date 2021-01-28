@@ -72,3 +72,12 @@ func sum(s []float64) []float64 {
 	}
 	return s
 }
+
+func sqrt(s []float64) []float64 {
+	if len(s) > 0 && s[len(s)-1] != 0 {
+		x := s[len(s)-1]
+		s = s[:len(s)-1]
+		s = append(s, math.Sqrt(x))
+	}
+	return s
+}

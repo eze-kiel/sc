@@ -148,3 +148,21 @@ func Test_sum(t *testing.T) {
 		})
 	}
 }
+
+func Test_sqrt(t *testing.T) {
+	tests := []struct {
+		name string
+		s    []float64
+		want []float64
+	}{
+		{name: "long enough", s: []float64{4}, want: []float64{2}},
+		{name: "too short", s: []float64{}, want: []float64{}},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := sqrt(tt.s); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("sqrt() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}

@@ -91,6 +91,8 @@ func rangeOverCommands(stack []float64, input []string) []float64 {
 			stack = pow(stack)
 		case "sum":
 			stack = sum(stack)
+		case "sqrt":
+			stack = sqrt(stack)
 		default:
 			n, err := strconv.ParseFloat(in, 64)
 			if err != nil {

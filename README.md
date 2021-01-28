@@ -64,4 +64,4 @@ Supported commands are the following:
   
 ## License
 
-MIT
+[WTFPL](https://choosealicense.com/licenses/wtfpl/)

@@ -11,8 +11,6 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-type stack []float64
-
 func main() {
 	var stack []float64
 	r := bufio.NewReader(os.Stdin)

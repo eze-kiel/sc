@@ -4,7 +4,7 @@
 
 ## Usage
 
-The most basic usage is just by invoking the program name:
+The most basic usage is just invoking the program name:
 
 ```
 sc

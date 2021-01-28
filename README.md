@@ -7,7 +7,7 @@
 The most basic usage is just invoking the program name:
 
 ```
-sc
+$ sc
 ```
 
 Then you can enter values and commands ([see commands](#commands)):

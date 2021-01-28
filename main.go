@@ -46,6 +46,8 @@ func main() {
 				stack = []float64{}
 			case "^", "pow":
 				stack = pow(stack)
+			case "sum":
+				stack = sum(stack)
 			default:
 				n, err := strconv.ParseFloat(in, 64)
 				if err != nil {
@@ -70,6 +72,7 @@ func getInput(r *bufio.Reader) ([]string, error) {
 }
 
 func showStack(s []float64) {
+	fmt.Println()
 	for _, val := range s {
 		fmt.Printf("\t%f\n", val)
 	}

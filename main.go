@@ -77,7 +77,7 @@ func rangeOverCommands(stack []float64, input []string) []float64 {
 			stack = sub(stack)
 		case "*", "m", "mul":
 			stack = mul(stack)
-		case "/":
+		case "/", "d", "div":
 			stack = div(stack)
 		case "sw", "swap":
 			stack = swap(stack)

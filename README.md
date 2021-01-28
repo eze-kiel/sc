@@ -55,7 +55,7 @@ Supported commands are the following:
 * `*`, `m`, `mul`: Multiply the last two elements of the stack
 * `/`, `d`, `div`: Divide the last two elements of the stack
 * `sw`, `swap`: Swap the last two elements of the stack
-* `p`, `pop`: Pop the last element of the stack
+* `p`, `pop`: Pop the last element from the stack
 * `q`, `quit`: Quit the program
 * `c`, `clear`: Clear the stack
 * `^`, `pow`: Do a power of the last two elements of the stack

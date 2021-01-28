@@ -37,12 +37,14 @@ $ sc
         300.000000
 ```
 
-Moreover, you can pipe commands into `sc`:
+Moreover, you can pipe values into `sc`:
 
 ```
 $ echo "2 10 pow" | sc 
 1024
 ```
+
+It will display the last element of the stack.
 
 ## Commands
 

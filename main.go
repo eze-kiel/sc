@@ -22,7 +22,7 @@ func main() {
 		if err != nil && err == io.EOF {
 			os.Exit(0)
 		} else if err != nil {
-			logrus.Errorf("error parsing output: %s", err)
+			logrus.Errorf("error parsing input: %s", err)
 			continue
 		}
 

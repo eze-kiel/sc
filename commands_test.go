@@ -130,3 +130,21 @@ func Test_pow(t *testing.T) {
 		})
 	}
 }
+
+func Test_sum(t *testing.T) {
+	tests := []struct {
+		name string
+		s    []float64
+		want []float64
+	}{
+		{name: "long enough", s: []float64{5, 10, 12}, want: []float64{27}},
+		{name: "too short", s: []float64{5}, want: []float64{5}},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := sum(tt.s); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("sum() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}

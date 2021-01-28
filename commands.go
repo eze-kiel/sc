@@ -61,3 +61,14 @@ func pow(s []float64) []float64 {
 	}
 	return s
 }
+
+func sum(s []float64) []float64 {
+	if len(s) > 1 {
+		var sum float64
+		for _, v := range s {
+			sum += v
+		}
+		return []float64{sum}
+	}
+	return s
+}

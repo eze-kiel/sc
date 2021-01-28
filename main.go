@@ -40,7 +40,7 @@ func main() {
 		case "p", "pop":
 			stack = pop(stack)
 		case "q", "quit":
-			quit()
+			os.Exit(0)
 		case "c", "clear":
 			stack = []float64{}
 		default:

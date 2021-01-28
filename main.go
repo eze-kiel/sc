@@ -70,8 +70,8 @@ func getInput(r *bufio.Reader) ([]string, error) {
 }
 
 func showStack(s []float64) {
-	for idx, val := range s {
-		fmt.Printf("%d:\t%f\n", idx, val)
+	for _, val := range s {
+		fmt.Printf("\t%f\n", val)
 	}
 	fmt.Println()
 }

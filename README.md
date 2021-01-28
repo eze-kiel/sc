@@ -26,7 +26,7 @@ $ sc
         27.000000
 ```
 
-On the left, it is your inputs. On the right, the stack.
+On the left, it is your input. On the right, the stack.
 
 You can enter more than one value, as long as they are separated by spaces:
 
@@ -48,15 +48,15 @@ $ echo "2 10 pow" | sc
 
 Supported commands are the following:
 
-* `+`,`a`,`add`: Add the last two elements of the stack
-* `-`,`s`,`sub`: Substract the last two elements of the stack
-* `*`,`m`,`mul`: Multiply the last two elements of the stack
-* `/`,`d`,`div`: Divide the last two elements of the stack
-* `sw`,`swap`: Swap the last two elements of the stack
-* `p`,`pop`: Pop the last element of the stack
-* `q`,`quit`: Quit the program
-* `c`,`clear`: Clear the stack
-* `^`,`pow`: Do a power of the last two elements of the stack
+* `+`, `a`, `add`: Add the last two elements of the stack
+* `-`, `s`, `sub`: Substract the last two elements of the stack
+* `*`, `m`, `mul`: Multiply the last two elements of the stack
+* `/`, `d`, `div`: Divide the last two elements of the stack
+* `sw`, `swap`: Swap the last two elements of the stack
+* `p`, `pop`: Pop the last element of the stack
+* `q`, `quit`: Quit the program
+* `c`, `clear`: Clear the stack
+* `^`, `pow`: Do a power of the last two elements of the stack
 * `sum`: Sum all the stack
   
 ## License

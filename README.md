@@ -1,13 +1,13 @@
 # sc
 
-**s**mall RPN **c**alculator written in Golang
+**S**mall RPN **c**alculator written in Golang
 
 ## Usage
 
-The most basic usage is just by invoking the program name:
+The most basic usage is just invoking the program name:
 
 ```
-sc
+$ sc
 ```
 
 Then you can enter values and commands ([see commands](#commands)):
@@ -37,12 +37,14 @@ $ sc
         300.000000
 ```
 
-Moreover, you can pipe commands into `sc`:
+Moreover, you can pipe values into `sc`:
 
 ```
 $ echo "2 10 pow" | sc 
 1024
 ```
+
+It will display the last element of the stack.
 
 ## Commands
 
@@ -53,7 +55,7 @@ Supported commands are the following:
 * `*`, `m`, `mul`: Multiply the last two elements of the stack
 * `/`, `d`, `div`: Divide the last two elements of the stack
 * `sw`, `swap`: Swap the last two elements of the stack
-* `p`, `pop`: Pop the last element of the stack
+* `p`, `pop`: Pop the last element from the stack
 * `q`, `quit`: Quit the program
 * `c`, `clear`: Clear the stack
 * `^`, `pow`: Do a power of the last two elements of the stack

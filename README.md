@@ -1,6 +1,6 @@
 # sc
 
-**s**mall RPN **c**alculator written in Golang
+**S**mall RPN **c**alculator written in Golang
 
 ## Usage
 

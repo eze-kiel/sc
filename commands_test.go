@@ -112,3 +112,21 @@ func Test_pop(t *testing.T) {
 		})
 	}
 }
+
+func Test_pow(t *testing.T) {
+	tests := []struct {
+		name string
+		s    []float64
+		want []float64
+	}{
+		{name: "long enough", s: []float64{5, 10}, want: []float64{9765625}},
+		{name: "too short", s: []float64{5}, want: []float64{5}},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := pow(tt.s); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("pow() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}

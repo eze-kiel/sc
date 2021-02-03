@@ -61,7 +61,8 @@ Supported commands are the following:
 * `^`, `pow`: Do a power of the last two elements of the stack
 * `sum`: Sum all the stack
 * `sqrt`: Get the square root of the last element of the stack
-  
+* `h`, `help`: Display help
+
 ## License
 
 [WTFPL](https://choosealicense.com/licenses/wtfpl/)

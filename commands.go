@@ -124,6 +124,9 @@ Functions:
 
   q, quit
   	quit the program
+  
+  h, help
+	display help
 ---
 
 `)

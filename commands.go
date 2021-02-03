@@ -1,6 +1,9 @@
 package main
 
-import "math"
+import (
+	"fmt"
+	"math"
+)
 
 func add(s []float64) []float64 {
 	if len(s) > 1 {
@@ -80,4 +83,48 @@ func sqrt(s []float64) []float64 {
 		s = append(s, math.Sqrt(x))
 	}
 	return s
+}
+
+func help() {
+	fmt.Println(`
+--- Help
+
+Basic:
+  +, a, add
+  	add last 2 values of the stack
+  
+  -, s, sub
+  	subtract last 2 values of the stack
+  
+  *, m, mul
+  	multiply last 2 values of the stack
+
+  /, d, div
+  	divide last 2 values of the stack
+
+Advanced:
+  ^, pow
+  	power of the last 2 values of the stack
+
+  sum
+  	sum all the stack
+
+  sqrt
+  	square root the last value of the stack
+
+Functions:
+  sw, swap
+	swap last two values of the stack
+
+  p, pop
+  	pop last value of the stack
+
+  c, clear
+	clear the stack
+
+  q, quit
+  	quit the program
+---
+
+`)
 }

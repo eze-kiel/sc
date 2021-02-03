@@ -65,7 +65,6 @@ func showStack(s []float64) {
 	for _, val := range s {
 		fmt.Printf("\t%f\n", val)
 	}
-	fmt.Println()
 }
 
 func rangeOverCommands(stack []float64, input []string) []float64 {
@@ -93,6 +92,10 @@ func rangeOverCommands(stack []float64, input []string) []float64 {
 			stack = sum(stack)
 		case "sqrt":
 			stack = sqrt(stack)
+		case "":
+			return stack
+		case "h", "help":
+			help()
 		default:
 			n, err := strconv.ParseFloat(in, 64)
 			if err != nil {
